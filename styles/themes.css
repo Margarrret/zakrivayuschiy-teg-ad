@@ -5,49 +5,59 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-:root.theme-light {
-  --headings-font-weight: 700;
-  --page-main-font-weight: 400;
-  --button-text-color: var(--color-white, #fff);
-  --text-color: var(--color-black, #000000);
-  --page-background-color: var(--color-white, #ffffff);
-  --page-background-image: repeating-linear-gradient(
-      to left,
-      #d3d3d3 0 2px,
-      #d3d3d300 2px 4px
-    ),
-    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: #FFF;
+        --text-color: #000;
+        --gradient-color-first: #d3d3d3;
+        --gradient-color-second: #e7e7e7;
+        --gradient-color-third: #1a1a1a;
+        --difference-background-color: #fff;
+        --difference-text-color: #fff;
+        --contour-color: #000;
+        --slim-font-weight: 400;
+        --bold-font-weight: 700;
+    }
 }
 
-:root.theme-dark {
-  --headings-font-weight: 785;
-  --page-main-font-weight: 465;
-  --button-text-color: var(--color-green, #00cc14);
-  --text-color: var(--color-green, #00cc14);
-  --page-background-color: var(--color-black, #000000);
-  --page-background-image: repeating-linear-gradient(
-      to left,
-      #000000 0 2px,
-      #00000000 2px 4px
-    ),
-    repeating-linear-gradient(to bottom, #000000 0 2px, #00000000 2px 4px),
-    linear-gradient(to bottom, #007f0c, #004306);
+:root.theme-light {
+    --background-color: #FFF;
+    --text-color: #000;
+    --gradient-color-first: #d3d3d3;
+    --gradient-color-second: #e7e7e7;
+    --gradient-color-third: #1a1a1a;
+    --difference-background-color: #fff;
+    --difference-text-color: #fff;
+    --contour-color: #000;
+    --slim-font-weight: 400;
+    --bold-font-weight: 700;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --headings-font-weight: 785;
-    --page-main-font-weight: 465;
-    --button-text-color: var(--color-green, #00cc14);
-    --text-color: var(--color-green, #00cc14);
-    --page-background-color: var(--color-black, #000000);
-    --page-background-image: repeating-linear-gradient(
-        to left,
-        #000000 0 2px,
-        #00000000 2px 4px
-      ),
-      repeating-linear-gradient(to bottom, #000000 0 2px, #00000000 2px 4px),
-      linear-gradient(to bottom, #007f0c, #004306);
-  }
+    :root {
+        --background-color: #000;
+        --text-color: #00CC14;
+        --gradient-color-first: #000;
+        --gradient-color-second: #007f0c;
+        --gradient-color-third: #004306;
+        --difference-background-color: #00CC14;
+        --difference-text-color: #00CC14;
+        --contour-color: #00CC14;
+        --slim-font-weight: 465;
+        --bold-font-weight: 785;
+    }
+}
+
+:root.theme-dark {
+    --background-color: #000;
+    --text-color: #00CC14;
+    --gradient-color-first: #000;
+    --gradient-color-second: #007f0c;
+    --gradient-color-third: #004306;
+    --difference-background-color: #00CC14;
+    --difference-text-color: #00CC14;
+    --contour-color: #00CC14;
+    --slim-font-weight: 465;
+    --bold-font-weight: 785;
 }
