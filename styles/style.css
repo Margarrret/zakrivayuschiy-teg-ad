@@ -19,14 +19,15 @@
   font-family: var(--basic-font), sans-serif;
   font-variation-settings: 'wght' var(--slim-font-weight);
   font-size: 18px;
-  border-color: var(--text-color); 
+  border-color: var(--text-color);
   padding: 100px 0;
   color: var(--text-color);
   background-attachment: fixed;
   background-size: cover;
-  background-image: repeating-linear-gradient(to right, var(--gradient-color-first) 0 2px, transparent 2px 4px),
-  repeating-linear-gradient(var(--gradient-color-first) 0 2px, transparent 2px 4px),
-  linear-gradient(var(--gradient-color-second) 0.01%, var(--gradient-color-third) 100%);
+  background-image:
+    repeating-linear-gradient(to right, var(--gradient-color-first) 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(var(--gradient-color-first) 0 2px, transparent 2px 4px),
+    linear-gradient(var(--gradient-color-second) 0.01%, var(--gradient-color-third) 100%);
 }
 
 .header {
@@ -73,7 +74,7 @@
   font-family: var(--pixel-font, sans-serif);
 }
 
-.theme-menu__button{
+.theme-menu__button {
   text-transform: uppercase;
   border: 0;
   background-color: inherit;
@@ -131,7 +132,7 @@
   flex-direction: column;
 }
 
-.card-list{
+.card-list {
   width: var(--element-width);
   display: flex;
   flex-direction: column;
@@ -171,9 +172,9 @@
 
 @supports (-webkit-text-stroke: 1px var(--background-color)) or (text-stroke: 1px var(--background-color)) {
   .card-img-label {
-      text-shadow: none;
-      -webkit-text-stroke: 1px var(--background-color);
-      text-stroke: 1px var(--background-color);
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
   }
 }
 
@@ -188,7 +189,7 @@
 }
 
 .filter_grayscale {
-  filter:grayscale(75%);
+  filter: grayscale(75%);
 }
 
 .filter_brightness {
@@ -301,20 +302,19 @@
 }
 
 .button::before {
-  content: ""; 
-  display: block; 
-  position: absolute; 
-  z-index: 1; 
-  inset: 0; 
-  width: 0; 
-  height: 100%; 
-  display: block; 
-  background-color: var(--text-color); 
-  transition: width 0.5s ease-in-out; 
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--text-color);
+  transition: width 0.5s ease-in-out;
 }
 
 .button:hover::before {
-  width: 100%; 
+  width: 100%;
 }
 
 .card__like-button {
@@ -419,8 +419,7 @@ dialog::backdrop([open]) {
 }
 
 @media (width <= 376px) {
-  
-  .footer-button{
+  .footer-button {
     flex-direction: column;
   }
 
@@ -428,5 +427,4 @@ dialog::backdrop([open]) {
     width: 28px;
     height: 28px;
   }
-
 }
