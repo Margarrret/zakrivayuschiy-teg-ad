@@ -22,7 +22,6 @@
         <a class="header__title">&lt;/HTML&gt;</a>
         <h1 class="header__name">закрывающий тег</h1>
         <nav class="theme-menu header__theme-menu">
-          <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
           <ul class="theme-menu__list">
             <li class="theme-menu__item">
               <button
@@ -557,7 +556,7 @@
       <button
         type="button"
         class="button footer-button"
-        onclick="window['dialog-id'].showModal()"
+        onclick="document.getElementById('dialog-id').showModal()"
         aria-controls="dialog-id"
       >
         <svg class="footer-image" viewBox="0 0 21 21">
@@ -567,18 +566,14 @@
       </button>
     </main>
     <dialog class="dialog" id="dialog-id">
-      <form class="form" method="dialog">
+      <form method="dialog">
         <div class="form-icon-section">
           <svg class="form-icon" viewBox="0 0 21 21">
             <use href="./svg/floppy-optimized.svg#floppy"></use>
           </svg>
           <p class="form-icon-text">Вставьте дискету, чтобы продолжить</p>
         </div>
-        <button
-          class="form-button button"
-          type="submit"
-          onclick="window['dialog-id'.close()]"
-        >
+        <button class="form-button button" type="submit">
           <span class="button__text form-button-text">ok</span>
         </button>
       </form>
